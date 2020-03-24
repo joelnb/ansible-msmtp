@@ -12,7 +12,7 @@ This ansible role deploys msmtp for Ubuntu 18.04
 ## How to install
 
 * Use github to clone/fork in your role directory
-* ansible galaxy ```ansible-galaxy install joelnb.msmtp```
+* ansible galaxy ```ansible-galaxy install joelnb.ansible_msmtp```
 
 ## Variables
 
