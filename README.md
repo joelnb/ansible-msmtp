@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/ahelal/ansible-msmtp.svg?branch=master)](https://travis-ci.org/ahelal/ansible-msmtp)
+[![Build Status](https://travis-ci.org/joelnb/ansible-msmtp.svg?branch=master)](https://travis-ci.org/joelnb/ansible-msmtp)
 
 # Readme
 
-This ansible role deploys msmtp for Ubuntu 12.04 (tested on vagrant)
+This ansible role deploys msmtp for Ubuntu 18.04
 
 ## Prerequisite
 
@@ -12,7 +12,7 @@ This ansible role deploys msmtp for Ubuntu 12.04 (tested on vagrant)
 ## How to install
 
 * Use github to clone/fork in your role directory
-* ansible galaxy ```ansible-galaxy install adham.helal.msmtp```
+* ansible galaxy ```ansible-galaxy install joelnb.msmtp```
 
 ## Variables
 
@@ -101,3 +101,7 @@ You should get a test mail if it works on the root mail
 ## Possible issues
 
 From field requires more work: [http://msmtp.sourceforge.net/doc/msmtp.html#Envelope_002dfrom-address](http://msmtp.sourceforge.net/doc/msmtp.html#Envelope_002dfrom-address)
+
+## Credits
+
+Initial work on this role was done by [ahelal](https://github.com/ahelal) over at [AutomationWithAnsible/ansible-msmtp](https://github.com/AutomationWithAnsible/ansible-msmtp).
