@@ -2,7 +2,7 @@
 
 # Author: Adham Helal
 #
-# Objective: Deploy msmtp 
+# Objective: Deploy msmtp
 
 - name: Update apt cache
   apt: update_cache=yes cache_valid_time=3600
@@ -15,7 +15,7 @@
     - msmtp
     - msmtp-mta
     - bsd-mailx
-  tags: mail    
+  tags: mail
   notify: test mail
   when: ansible_os_family == "Debian"
 
@@ -28,7 +28,7 @@
   when: ansible_os_family == "Archlinux"
 
 - name: Copy mstprc conf file
-  template: 
+  template:
      src=msmtprc.j2
      dest=/etc/msmtprc
      owner=root
@@ -38,7 +38,7 @@
   notify: test mail
 
 - name: Copy aliases conf file
-  template: src=aliases.j2 dest=/etc/aliases 
+  template: src=aliases.j2 dest=/etc/aliases
             owner=root group=root mode=0644
   tags: mail
   notify: test mail

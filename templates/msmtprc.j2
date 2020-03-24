@@ -9,7 +9,7 @@ tls_trust_file {{msmtp_tls_trust_file}}
 tls_trust_file /etc/ssl/certs/ca-certificates.crt
 {% endif %}
 
-# Logging 
+# Logging
 {% if msmtp_log is defined %}
 {% if msmtp_log == "syslog" %}
 syslog on
