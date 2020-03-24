@@ -49,3 +49,25 @@
   tags:
     - mail
   notify: test mail
+
+- name: Template systemd email service
+  template:
+    src: etc/systemd/system/status-email-user@.service.j2
+    dest: /etc/systemd/system/status-email-user@.service
+    owner: root
+    group: root
+    mode: 0644
+  when: msmtp_enable_systemd_notifications == True
+  tags:
+    - mail
+
+- name: Copy systemd email script
+  copy:
+    src: usr/local/sbin/systemd-email
+    dest: /usr/local/sbin/systemd-email
+    owner: root
+    group: root
+    mode: 0755
+  when: msmtp_enable_systemd_notifications == True
+  tags:
+    - mail

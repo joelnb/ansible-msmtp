@@ -23,6 +23,10 @@ msmtp_log           : "syslog"
 #msmtp_logfile       : /var/log/msmtp.log
 
 ## Aliases mail account ( only msmtp_alias_default is required the rest is optional )
-msmtp_alias_default : ops@example.
+msmtp_alias_default : ops@example.com
 msmtp_alias_root    : root@example.com
 msmtp_alias_cron    : cron@example.com
+
+## Systemd notification service can be disabled & kept off the system
+msmtp_enable_systemd_notifications: yes
+msmtp_systemd_notification_address: ops@example.com
