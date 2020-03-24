@@ -22,18 +22,18 @@ All the default variables are located **defaults/main.yml**. Mostly you would ne
 
     ```yaml
     msmtp_accounts:
-    - account  : "gmail"
-      host     : "smtp.gmail.com"
-      port     : 587
-      auth     : "on"
-      user     : "example@gmail.example"
-      password : "some password"
-    - account  : "mysmtp"
-      host     : "smtp.example"
-      port     : 587
-      auth     : "on"
-      user     : "myuser"
-      password : "123456"
+    - account: "gmail"
+      host: "smtp.gmail.com"
+      port: 587
+      auth: "on"
+      user: "example@gmail.example"
+      password: "some password"
+    - account: "mysmtp"
+      host: "smtp.example"
+      port: 587
+      auth: "on"
+      user: "myuser"
+      password: "123456"
     ```
 
   - *msmtp_default_account:* Default smtp account to use
@@ -42,42 +42,42 @@ All the default variables are located **defaults/main.yml**. Mostly you would ne
 
   - *msmtp_from:* From field
 
-    ```msmtp_from : "No Reply"```
+    ```msmtp_from: "No Reply"```
 
   - Logging
 
      - Option A (syslog)
 
         ```yaml
-        msmtp_log : "syslog"
+        msmtp_log: "syslog"
         ```
 
      - Option B (file logging)
 
         ```yaml
-        msmtp_log     : "file"
-        msmtp_logfile : /var/log/msmtp.log
+        msmtp_log: "file"
+        msmtp_logfile: /var/log/msmtp.log
         ```
 
      - Option C (No logging)
 
         ```yaml
-        msmtp_log     : "no"
+        msmtp_log: "no"
         ```
 
   - Mail aliases
 
      - *msmtp_alias_default:* default email this required
 
-       ```msmtp_alias_default : ops@example.com```
+       ```msmtp_alias_default: ops@example.com```
 
      - *msmtp_alias_root:* root email this is optional
 
-       ```msmtp_alias_root : root@example.com```
+       ```msmtp_alias_root: root@example.com```
 
      - *msmtp_alias_cron:* cron email this optional
 
-       ```msmtp_alias_cron : cron@example.com```
+       ```msmtp_alias_cron: cron@example.com```
 
 ## Configure
 
