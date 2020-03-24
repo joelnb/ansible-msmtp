@@ -35,18 +35,18 @@
 
 - name: Copy mstprc conf file
   template:
-    src: msmtprc.j2
+    src: templates/etc/msmtprc.j2
     dest: /etc/msmtprc
     owner: root
     group: root
-    mode: 0644
+    mode: 0640
   tags:
     - mail
   notify: test mail
 
 - name: Copy aliases conf file
   template:
-    src: aliases.j2
+    src: templates/etc/aliases.j2
     dest: /etc/aliases
     owner: root
     group: root
